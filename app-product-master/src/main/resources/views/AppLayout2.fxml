@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane fx:id="contentLayer" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphics.utility.AppLayoutController">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="1080.0" stylesheets="@AppStyling.css">
+         <top>
+            <BorderPane fx:id="menuBar" styleClass="menu-bar" BorderPane.alignment="CENTER">
+               <left>
+                  <HBox id="menuButtons" alignment="CENTER_LEFT" spacing="10.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="toggleSideBarBtn" mnemonicParsing="false" styleClass="menu-nav-button">
+                           <tooltip>
+                              <Tooltip text="Toggle Sidebar" />
+                           </tooltip></Button>
+                        <Button fx:id="imagesBtnRotate" mnemonicParsing="false" styleClass="menu-nav-button" text="Images" />
+                        <Button fx:id="albumsBtn" mnemonicParsing="false" styleClass="menu-nav-button" text="Tags" />
+                        <Button fx:id="mapBtn" mnemonicParsing="false" styleClass="menu-nav-button" text="Map" />
+                        <MenuButton fx:id="addBtn" mnemonicParsing="false" text="Add">
+                          <items>
+                            <MenuItem fx:id="addImageBtn" mnemonicParsing="false" text="Add Images" />
+                            <MenuItem fx:id="addFolderBtn" mnemonicParsing="false" text="Add Folder" />
+                          </items>
+                        </MenuButton>
+                     </children>
+                  </HBox>
+               </left>
+               <right>
+                  <HBox>
+                     <children>
+                        <Button fx:id="zoomInBtn" mnemonicParsing="false" prefHeight="29.0" prefWidth="32.0">
+                           <tooltip>
+                              <Tooltip text="Zoom In" />
+                           </tooltip></Button>
+                        <Button fx:id="zoomOutBtn" mnemonicParsing="false" prefHeight="29.0" prefWidth="32.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <tooltip>
+                              <Tooltip text="Zoom Out" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="fullScreenToggleBtn" mnemonicParsing="false" prefHeight="29.0" prefWidth="32.0">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                           <tooltip>
+                              <Tooltip text="Toggle Fullscreen" />
+                           </tooltip>
+                        </Button>
+                        <StackPane prefWidth="300.0">
+                           <children>
+                              <TextField fx:id="searchField" prefWidth="300.0" promptText="Search" />
+                              <Button fx:id="searchFieldClearBtn" contentDisplay="TOP" mnemonicParsing="false" text="X" textAlignment="CENTER" StackPane.alignment="CENTER_RIGHT">
+                                 <font>
+                                    <Font name="Arial" size="9.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets right="5.0" />
+                                 </StackPane.margin>
+                              </Button>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+               </right>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <center>
+                  <BorderPane BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+         </top>
+         <bottom>
+            <BorderPane styleClass="bottom-bar" BorderPane.alignment="CENTER">
+               <left>
+                  <Text fx:id="identityText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="bottom-bar-identity" text="Logged in as {username}" BorderPane.alignment="CENTER" />
+               </left>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </BorderPane>
+         </bottom>
+         <center>
+            <SplitPane fx:id="mainSplitPane" prefHeight="535.0" prefWidth="924.0" />
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

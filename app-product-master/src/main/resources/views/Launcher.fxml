@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="237.0" prefWidth="326.0" styleClass="launcher-main" stylesheets="@LauncherStyling.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="graphics.utility.LoadingScreenController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="88.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/loading.gif" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="79.0" fitWidth="200.0" layoutX="63.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/flagship-moon.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="79.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="photo management application" />
+   </children>
+</Pane>

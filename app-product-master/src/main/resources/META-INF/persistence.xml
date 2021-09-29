@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+    <!-- app-product persistence unit -->
+    <persistence-unit name="app-product" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <class>hibernate.model.User</class>
+        <class>hibernate.model.ImageData</class>
+        <class>hibernate.model.Metadata</class>
+        <class>hibernate.model.Album</class>
+
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="" />
+            <property name="javax.persistence.jdbc.url" value="l" />
+            <property name="javax.persistence.jdbc.user" value="" />
+            <property name="javax.persistence.jdbc.password" value="" />
+            <property name="show_sql" value="true" />
+            <!-- Hibernate Settings -->
+            <property name="hibernate.hbm2ddl" value="create-drop" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+            <!-- Hikari Settings -->
+            <property name="hibernate.connection.provider_class" value="org.hibernate.hikaricp.internal.HikariCPConnectionProvider" />
+            <property name="hibernate.hikari.minimumIdle" value="3" />
+            <property name="hibernate.hikari.maximumPoolSize" value="8" />
+            <property name="hibernate.hikari.idleTimeout" value="20000" />
+            <!-- HBM2DDL Settings -->
+            <property name="hibernate.hbm2ddl.auto" value="none" />
+        </properties>
+    </persistence-unit>
+</persistence>

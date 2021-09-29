@@ -1,0 +1,8 @@
+.root {
+    -fx-background-color: transparent;
+}
+
+.launcher-main {
+    -fx-background-color: #5b5656;
+    -fx-background-radius: 5;
+}

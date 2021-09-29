@@ -1,0 +1,7 @@
+#ThumbnailTitle {
+    -fx-font-family: Tahoma;
+    -fx-fill: white;
+    -fx-border-color: black;
+    -fx-border-image-width: 50%;
+    -fx-font-size: 5mm;
+}
